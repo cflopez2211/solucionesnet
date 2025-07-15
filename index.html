@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLUCIONES NET - Soluciones Digitales y de TI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navbar -->
+    <!-- Sticky header con sombra dinámica al hacer scroll -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all-ease">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">
+                <span class="text-blue-900">SOLUCIONES</span><span class="text-gray-900">NET</span>
+            </a>
+            <!-- Menú de navegación para escritorio -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition-all-ease">Servicios</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition-all-ease">Portafolio</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 transition-all-ease">Testimonios</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-all-ease">Nosotros</a>
+                <a href="#contact" class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-all-ease cta-button">Contáctanos</a>
+            </div>
+            <!-- Botón de menú móvil -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md hover:bg-gray-100 transition-all-ease">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Menú móvil (inicialmente oculto, con transición de altura) -->
+        <div id="mobile-menu" class="hidden md:hidden overflow-hidden transition-all-ease duration-300 ease-in-out" style="max-height: 0px;">
+            <a href="#services" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-all-ease">Servicios</a>
+            <a href="#portfolio" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-all-ease">Portafolio</a>
+            <a href="#testimonials" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-all-ease">Testimonios</a>
+            <a href="#about" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-all-ease">Nosotros</a>
+            <a href="#contact" class="block py-3 px-6 text-sm bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold transition-all-ease">Contáctanos</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <!-- Elementos con animación de entrada fade-in-up -->
+        <section class="hero-bg text-white pt-20 pb-28">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 fade-in-up">Transformamos Ideas en Soluciones Digitales</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-up" style="transition-delay: 0.1s;">Creamos aplicaciones móviles, diseñamos páginas web de alto impacto y resolvemos tus desafíos de informática y telecomunicaciones.</p>
+                <a href="#contact" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-all-ease cta-button inline-block fade-in-up" style="transition-delay: 0.2s;">Solicita una Consultoría Gratuita</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nuestros Servicios</h2>
+                    <p class="text-gray-600 mt-2">Soluciones integrales para potenciar tu negocio en el mundo digital.</p>
+                </div>
+                <!-- Cada tarjeta de servicio con animación de entrada fade-in-up y hover effects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1: Web Development -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Desarrollo de Páginas Web</h3>
+                        <p class="text-gray-600">Creamos sitios web modernos, responsivos y optimizados para SEO. Desde landing pages hasta e-commerce complejos, damos vida a tu presencia online.</p>
+                    </div>
+                    <!-- Service 2: App Development -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Venta y Desarrollo de Apps</h3>
+                        <p class="text-gray-600">Ofrecemos aplicaciones listas para usar y desarrollamos soluciones a medida para iOS y Android que optimizan procesos y conectan con tus clientes.</p>
+                    </div>
+                    <!-- Service 3: IT & Telecom -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Soluciones en TI y Telecom</h3>
+                        <p class="text-gray-600">Desde la gestión de redes y seguridad informática hasta consultoría en infraestructura tecnológica, aseguramos la continuidad y eficiencia de tu operación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nuestro Trabajo</h2>
+                    <p class="text-gray-600 mt-2">Casos de éxito que demuestran nuestra capacidad y compromiso.</p>
+                </div>
+                <!-- Cada tarjeta de portafolio con animación de entrada fade-in-up y hover effects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden group fade-in-up" style="transition-delay: 0.1s;">
+                        <img src="https://placehold.co/600x400/34495e/ffffff?text=Proyecto+Web" alt="Proyecto de página web" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">E-commerce de Moda</h3>
+                            <p class="text-gray-600 text-sm">Desarrollo de una tienda online completa con pasarela de pagos y gestión de inventario.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden group fade-in-up" style="transition-delay: 0.2s;">
+                        <img src="https://placehold.co/600x400/8e44ad/ffffff?text=Proyecto+App" alt="Proyecto de aplicación móvil" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">App de Reservas</h3>
+                            <p class="text-gray-600 text-sm">Aplicación móvil para agendar citas en un spa, mejorando la experiencia del cliente.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden group fade-in-up" style="transition-delay: 0.3s;">
+                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Proyecto+TI" alt="Proyecto de infraestructura TI" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Infraestructura Cloud</h3>
+                            <p class="text-gray-600 text-sm">Migración de servidores locales a una solución en la nube para una empresa de logística.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section - Nueva sección para generar confianza -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Lo que Dicen Nuestros Clientes</h2>
+                    <p class="text-gray-600 mt-2">La satisfacción de nuestros clientes es nuestra mayor recompensa.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg fade-in-up" style="transition-delay: 0.1s;">
+                        <p class="text-gray-700 italic mb-4">"SOLUCIONES NET superó nuestras expectativas. Su equipo es profesional, eficiente y realmente entiende las necesidades de sus clientes. Nuestra nueva web es justo lo que necesitábamos."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/60x60/a0aec0/ffffff?text=JD" alt="Avatar de Cliente" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-900">Juan D. Pérez</p>
+                                <p class="text-sm text-gray-600">CEO, InnovaTech S.A.S.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg fade-in-up" style="transition-delay: 0.2s;">
+                        <p class="text-gray-700 italic mb-4">"La aplicación móvil que desarrollaron para nosotros ha transformado la forma en que interactuamos con nuestros usuarios. Es intuitiva, robusta y estéticamente impecable."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/60x60/a0aec0/ffffff?text=MA" alt="Avatar de Cliente" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-900">María A. Gómez</p>
+                                <p class="text-sm text-gray-600">Directora de Marketing, FitLife App</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg fade-in-up" style="transition-delay: 0.3s;">
+                        <p class="text-gray-700 italic mb-4">"Su soporte en TI es invaluable. Nos brindan soluciones rápidas y efectivas, permitiéndonos enfocarnos en nuestro negocio sin preocuparnos por la infraestructura tecnológica."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/60x60/a0aec0/ffffff?text=RL" alt="Avatar de Cliente" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-900">Roberto L. Vargas</p>
+                                <p class="text-sm text-gray-600">Gerente de Operaciones, Logística Express</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <!-- Imagen con animación de entrada fade-in -->
+                <div class="md:w-1/2 fade-in">
+                    <img src="https://placehold.co/600x450/e2e8f0/334155?text=Nuestro+Equipo" alt="Equipo de SOLUCIONES NET" class="rounded-lg shadow-xl">
+                </div>
+                <!-- Texto con animación de entrada fade-in-up -->
+                <div class="md:w-1/2 fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre SOLUCIONES NET</h2>
+                    <p class="text-gray-600 mb-4">Somos un equipo de apasionados por la tecnología, dedicados a crear soluciones que no solo cumplen con los objetivos, sino que los superan. Nuestra misión es ser el socio tecnológico que impulse el crecimiento y la innovación en cada uno de nuestros clientes.</p>
+                    <p class="text-gray-600">Con años de experiencia en el sector, combinamos conocimiento técnico con una visión estratégica para entregar resultados medibles y de alta calidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <!-- Formulario de contacto con animación de entrada fade-in-up -->
+                <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 lg:p-16 max-w-4xl mx-auto fade-in-up">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">¿Tienes un proyecto en mente?</h2>
+                        <p class="text-gray-600 mt-2">Hablemos de cómo podemos ayudarte. Completa el formulario y te contactaremos a la brevedad.</p>
+                    </div>
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition-all-ease">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition-all-ease">
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Servicio de Interés</label>
+                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition-all-ease">
+                                <option>Desarrollo Web</option>
+                                <option>Aplicaciones Móviles</option>
+                                <option>Soluciones TI y Telecom</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="mt-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition-all-ease"></textarea>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-12 rounded-lg text-lg hover:bg-indigo-700 transition-all-ease cta-button">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">SOLUCIONES <span class="text-indigo-400">NET</span></h3>
+                    <p class="text-gray-400">Soluciones digitales para un mundo moderno.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-all-ease">Servicios</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-all-ease">Portafolio</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-all-ease">Testimonios</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-all-ease">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">Síguenos</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <!-- Íconos de redes sociales con hover effects -->
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-ease">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-ease">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3M8.5,18H5.5V10H8.5V18M7,8.5C6.17,8.5 5.5,7.83 5.5,7C5.5,6.17 6.17,5.5 7,5.5C7.83,5.5 8.5,6.17 8.5,7C8.5,7.83 7.83,8.5 7,8.5M18.5,18H15.5V13.25C15.5,12.03 15,11.5 14.25,11.5C13.5,11.5 13,12.03 13,13.25V18H10V10H13V11.25C13.43,10.44 14.39,10 15.25,10C17.5,10 18.5,11.5 18.5,13.25V18Z" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2024 SOLUCIONES NET. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón "Volver arriba" -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 z-40">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+    <script src="script/script.js"></script>
+</body>
+</html>

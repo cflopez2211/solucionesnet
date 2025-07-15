@@ -1,0 +1,50 @@
+        /* Estilos base para la fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Previene el scroll horizontal causado por animaciones */
+        }
+        /* Fondo del Hero Section con un patrón sutil */
+        .hero-bg {
+            background-color: #111827; /* Color de fondo oscuro */
+            background-image: radial-gradient(circle at 1px 1px, #374151 1px, transparent 0); /* Patrón de puntos sutil */
+            background-size: 20px 20px; /* Tamaño del patrón */
+        }
+        /* Transición general para elementos interactivos */
+        .transition-all-ease {
+            transition: all 0.3s ease;
+        }
+        /* Estilo para el botón CTA con efecto hover */
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px); /* Ligero desplazamiento hacia arriba */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Sombra al hacer hover */
+        }
+
+        /* Clases para animaciones de entrada (inicialmente ocultas) */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+        /* Clase para activar la animación */
+        .fade-in-up.animate, .fade-in.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo para el botón "Volver arriba" */
+        #back-to-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
