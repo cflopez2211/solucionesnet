@@ -9,10 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="imagenes/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon-16x16.png">
-    <link rel="manifest" href="imagenes/site.webmanifest">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -48,9 +44,12 @@
 
     <main>
         <!-- Hero Section -->
-        <!-- Elementos con animación de entrada fade-in-up -->
-        <section class="hero-bg text-white pt-20 pb-28">
-            <div class="container mx-auto px-6 text-center">
+        <!-- Contenedor principal del Hero con el fondo animado -->
+        <section class="hero-section-container text-white">
+            <!-- El fondo animado se posiciona absolutamente dentro de este contenedor -->
+            <div class="animated-background"></div>
+            <!-- Contenido del Hero, asegurado con z-index alto -->
+            <div class="container mx-auto px-6 text-center hero-content">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 fade-in-up">Transformamos Ideas en Soluciones Digitales</h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-up" style="transition-delay: 0.1s;">Creamos aplicaciones móviles, diseñamos páginas web de alto impacto y resolvemos tus desafíos de informática y telecomunicaciones.</p>
                 <a href="#contact" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-all-ease cta-button inline-block fade-in-up" style="transition-delay: 0.2s;">Solicita una Consultoría Gratuita</a>
@@ -211,7 +210,7 @@
                         </div>
                         <div class="mt-6">
                             <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Servicio de Interés</label>
-                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition-all-ease">
+                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
                                 <option>Desarrollo Web</option>
                                 <option>Aplicaciones Móviles</option>
                                 <option>Soluciones TI y Telecom</option>
@@ -275,6 +274,20 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
     </button>
+
+    <!-- Botón de WhatsApp flotante -->
+    <!-- Asegúrate de reemplazar "573XXXXXXXXX" con tu número de WhatsApp con el código de país (sin el signo +) -->
+    <!-- Y personaliza el mensaje pre-rellenado -->
+    <a href="https://wa.me/573XXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20saber%20más." 
+       class="fixed bottom-20 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 z-40 transition-all-ease"
+       target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <!-- Icono de WhatsApp (SVG simple) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.45 0-9.91 4.46-9.91 9.91 0 1.75.46 3.45 1.32 4.95l-1.45 5.31 5.43-1.42c1.45.79 3.08 1.25 4.61 1.25 5.45 0 9.91-4.46 9.91-9.91s-4.46-9.91-9.91-9.91zm0 1.8c4.48 0 8.11 3.63 8.11 8.11s-3.63 8.11-8.11 8.11c-1.45 0-2.88-.38-4.11-1.08l-.3-.18-3.13.82.83-3.04-.2-.31c-.72-1.12-1.1-2.45-1.1-3.88 0-4.48 3.63-8.11 8.11-8.11zm-2.75 4.5c-.12 0-.25.04-.38.08-.12.04-.23.1-.34.18-.1.08-.19.18-.26.26-.07.08-.13.18-.18.28-.05.1-.08.2-.08.33s.03.23.08.33c.05.1.1.18.17.26.07.08.15.15.24.23.09.08.19.16.3.23.1.07.2.14.32.2.12.06.25.1.38.1.13 0 .25-.04.38-.08.12-.04.23-.1.34-.18.1-.08.19-.18.26-.26.07-.08.13-.18.18-.28.05-.1.08-.2.08-.33s-.03-.23-.08-.33c-.05-.1-.1-.18-.17-.26-.07-.08-.15-.15-.24-.23-.09-.08-.19-.16-.3-.23-.1-.07-.2-.14-.32-.2-.12-.06-.25-.1-.38-.1zm5.5 0c-.12 0-.25.04-.38.08-.12.04-.23.1-.34.18-.1.08-.19.18-.26.26-.07.08-.13.18-.18.28-.05.1-.08.2-.08.33s.03.23.08.33c.05.1.1.18.17.26.07.08.15.15.24.23.09.08.19.16.3.23.1.07.2.14.32.2.12.06.25.1.38.1.13 0 .25-.04.38-.08.12-.04.23-.1.34-.18.1-.08.19-.18.26-.26.07-.08.13-.18.18-.28.05-.1.08-.2.08-.33s-.03-.23-.08-.33c-.05-.1-.1-.18-.17-.26-.07-.08-.15-.15-.24-.23-.09-.08-.19-.16-.3-.23-.1-.07-.2-.14-.32-.2-.12-.06-.25-.1-.38-.1zm-2.75 5.5c-.38 0-.75.13-1.04.39-.29.26-.51.62-.62 1.04l-.04.16.03.18c.03.1.06.2.1.3.04.1.09.19.15.28.06.09.13.18.2.26.07.08.15.16.24.23.09.07.19.14.3.2.1.06.2.1.32.14.12.04.25.06.38.06.13 0 .25-.02.38-.06.12-.04.23-.08.34-.14.1-.06.19-.12.26-.2.07-.08.13-.16.18-.26.05-.1.08-.2.08-.33s-.03-.23-.08-.33c-.05-.1-.1-.18-.17-.26-.07-.08-.15-.15-.24-.23-.09-.08-.19-.16-.3-.23-.1-.07-.2-.14-.32-.2-.29-.14-.62-.22-.97-.22z"/>
+        </svg>
+    </a>
+
     <script src="script/script.js"></script>
+
 </body>
 </html>

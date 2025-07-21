@@ -1,50 +1,119 @@
-        /* Estilos base para la fuente Inter */
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden; /* Previene el scroll horizontal causado por animaciones */
-        }
-        /* Fondo del Hero Section con un patrón sutil */
-        .hero-bg {
-            background-color: #111827; /* Color de fondo oscuro */
-            background-image: radial-gradient(circle at 1px 1px, #374151 1px, transparent 0); /* Patrón de puntos sutil */
-            background-size: 20px 20px; /* Tamaño del patrón */
-        }
-        /* Transición general para elementos interactivos */
-        .transition-all-ease {
-            transition: all 0.3s ease;
-        }
-        /* Estilo para el botón CTA con efecto hover */
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px); /* Ligero desplazamiento hacia arriba */
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Sombra al hacer hover */
-        }
+/* Estilos base para la fuente Inter */
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Previene el scroll horizontal causado por animaciones */
+}
+/* Transición general para elementos interactivos */
+.transition-all-ease {
+    transition: all 0.3s ease;
+}
+/* Estilo para el botón CTA con efecto hover */
+.cta-button {
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    transform: translateY(-2px); /* Ligero desplazamiento hacia arriba */
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Sombra al hacer hover */
+}
 
-        /* Clases para animaciones de entrada (inicialmente ocultas) */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in {
-            opacity: 0;
-            transition: opacity 0.6s ease-out;
-        }
-        /* Clase para activar la animación */
-        .fade-in-up.animate, .fade-in.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* Clases para animaciones de entrada (inicialmente ocultas) */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+/* Clase para activar la animación */
+.fade-in-up.animate, .fade-in.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        /* Estilo para el botón "Volver arriba" */
-        #back-to-top {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        }
-        #back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
+/* Estilo para el botón "Volver arriba" */
+#back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Estilos para el nuevo fondo animado del Hero Section --- */
+.hero-section-container {
+    position: relative; /* Contenedor para posicionar el fondo */
+    background-color: #111827; /* Color de fondo oscuro base */
+    overflow: hidden; /* Asegura que la animación no se desborde */
+    padding-top: 5rem; /* Ajuste de padding para el contenido */
+    padding-bottom: 7rem; /* Ajuste de padding para el contenido */
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(29, 78, 216, 0.1), rgba(109, 40, 217, 0.1)); /* Degradado sutil */
+    background-size: 400% 400%; /* Tamaño grande para el movimiento del degradado */
+    animation: gradientAnimation 15s ease infinite; /* Animación del degradado */
+    opacity: 0.7; /* Transparencia para que no opaque el contenido */
+    z-index: 0; /* Detrás del contenido */
+}
+
+/* Animación del degradado */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Efecto de partículas/líneas sutiles con pseudo-elementos */
+.animated-background::before,
+.animated-background::after {
+    content: '';
+    position: absolute;
+    background: rgba(129, 140, 248, 0.05); /* Color de las líneas/puntos */
+    border-radius: 50%; /* Para puntos */
+    animation: moveParticles 20s linear infinite alternate; /* Animación de movimiento */
+    z-index: 1; /* Encima del degradado, debajo del contenido */
+}
+
+.animated-background::before {
+    width: 100px;
+    height: 2px; /* Simula una línea */
+    top: 10%;
+    left: -20%;
+    transform: rotate(30deg);
+    animation-duration: 25s; /* Duración diferente para variación */
+    animation-delay: 2s;
+    background: rgba(129, 140, 248, 0.08);
+}
+
+.animated-background::after {
+    width: 80px;
+    height: 2px; /* Simula otra línea */
+    bottom: 20%;
+    right: -15%;
+    transform: rotate(-45deg);
+    animation-duration: 18s; /* Duración diferente para variación */
+    animation-delay: 0s;
+    background: rgba(129, 140, 248, 0.06);
+}
+
+/* Animación de movimiento de las "partículas/líneas" */
+@keyframes moveParticles {
+    0% { transform: translate(0, 0) rotate(var(--rotation, 0deg)); opacity: 0.7; }
+    50% { transform: translate(100vw, 50vh) rotate(var(--rotation, 0deg)); opacity: 0.5; } /* Mueve a través del viewport */
+    100% { transform: translate(0, 0) rotate(var(--rotation, 0deg)); opacity: 0.7; }
+}
+
+/* Asegura que el contenido esté por encima del fondo animado */
+.hero-content {
+    position: relative;
+    z-index: 10; /* Mayor z-index para el contenido */
+}
